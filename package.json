@@ -1,0 +1,16 @@
+{
+  "name": "reverse-importer",
+  "version": "1.0.0",
+  "description": "Webservice para importação de zonas reversas baseado em blocos CIDR",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "body-parser": "^1.20.2",
+    "ip-cidr": "^3.0.0",
+    "mysql2": "^3.6.0",
+    "dotenv": "^16.3.1"
+  }
+}
