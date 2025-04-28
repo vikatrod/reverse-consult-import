@@ -5,21 +5,25 @@
 
 ### 1. Enviar CIDR
 
-<pre>
-curl -X POST http://127.0.0.1:3000/importar \
+```
+curl -u admin:senha123 -X POST http://127.0.0.1:3000/importar \
   -H "Content-Type: application/json" \
   -d '{"cidr":"45.229.104.0/24", "domain_id":1385}'
-</pre>
-
+```
 
 ### 2. Enviar Reverse Zone:
 
-<pre>
-curl -X POST http://127.0.0.1:3000/importar \
+```
+curl -u admin:senha123 -X POST http://127.0.0.1:3000/importar \
   -H "Content-Type: application/json" \
   -d '{"reverse_zone":"104.229.45.in-addr.arpa", "domain_id":1385}'
-</pre>
+```
 
+### 3. Apenas consultar
+
+```
+curl -u admin:senha123 -X POST http://127.0.0.1:3000/buscar-reverso -H "Content-Type: application/json" -d '{"cidr": "45.229.104.0/24"}' | jq
+```
 ---
 
 # Reverse Importer API
